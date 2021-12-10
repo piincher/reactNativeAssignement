@@ -27,7 +27,7 @@ export default function App() {
   };
 
   const filteredItems = items.filter((item) =>
-    item.product.toLocaleLowerCase().includes(searchField.toLocaleLowerCase())
+    item.product.toLowerCase().includes(searchField.toLowerCase())
   );
   return (
     <View style={styles.container}>

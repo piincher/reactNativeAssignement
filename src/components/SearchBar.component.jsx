@@ -1,10 +1,10 @@
 import React from 'react'
-import { TextInput,StyleSheet,View,Text } from 'react-native'
+import { TextInput,StyleSheet,View,Text ,SafeAreaView} from 'react-native'
 import {AntDesign} from '@expo/vector-icons'
 
 const SearchBar = ({onTermChange,searchField,addItem}) => {
     return (
-        <View style={styles.backgroundStyle}>
+        <SafeAreaView style={styles.backgroundStyle}>
             <TextInput 
             style={styles.inputStyle}
             autoCapitalize="none"
@@ -14,7 +14,7 @@ const SearchBar = ({onTermChange,searchField,addItem}) => {
             onChangeText={onTermChange}
             />
             <AntDesign name="plussquareo" style={styles.iconStyle} onPress={addItem}/>
-        </View>
+        </SafeAreaView>
         
         
     )
@@ -26,20 +26,18 @@ const styles = StyleSheet.create({
         fontSize:18,
     },
     backgroundStyle:{
-        marginTop:10,
-        height:50,
-        backgroundColor:'#F0EEEE',
-        borderRadius:5,
-        marginHorizontal:15,
-        flexDirection:'row',
-        marginBottom : 15
+    marginTop: 100,
+    backgroundColor: '#F0EEEE',
+    height: 50,
+    borderRadius: 5,
+    marginHorizontal: 15,
+    flexDirection: 'row',
+    marginBottom:10
     },
     iconStyle:{
-        //alignSelf:'flex-end',
         alignSelf:'center',
         marginHorizontal:15,
         fontSize:35,
-        cursor:'pointer'
     }
 })
 
